@@ -83,3 +83,7 @@ input#read {
   position: relative;
   top: 0.1rem;
 }
+
+form button {
+  height: 2rem;
+}
