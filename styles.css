@@ -17,17 +17,39 @@ header {
   margin: inherit;
 }
 
-#book-container{
+#book-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: 300px;
   gap: 20px;
 }
 
-#book-container div{
+#book-container div {
   background-color: gray;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+dialog {
+  font-size: 32px;
+  position: relative;
+  top: 30%;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+form > p {
+  font-size: 1.5em;
+  align-self: center;
+  margin: 0.5em;
+}
+
+dialog * {
+  font-size: 32px;
 }
