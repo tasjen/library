@@ -1,9 +1,14 @@
 :root {
   --container-width: 1200px;
+  font-size: 32px;
+}
+
+button {
+  font-size: 24px;
 }
 
 body > * {
-  margin: 0 auto;
+  margin: 1rem auto 0 auto;
   max-width: var(--container-width);
 }
 
@@ -12,44 +17,67 @@ header {
   justify-content: space-between;
 }
 
-#add-book {
-  display: block;
+#logo {
+  font-size: 2rem;
+}
+
+#add-book-container {
+  display: flex;
   margin: inherit;
+}
+
+#add-book {
+  height: 3em;
+  flex: 1;
 }
 
 #book-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-auto-rows: 300px;
   gap: 20px;
 }
 
 #book-container div {
-  background-color: gray;
+  background-color: #ccc;
   display: flex;
+  gap: 20px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 1em;
+}
+
+#book-container div > * {
+  flex: 1;
+  margin: 0;
+  align-self: stretch;
 }
 
 dialog {
   font-size: 32px;
-  position: relative;
-  top: 30%;
+  padding: 0;
 }
 
 form {
   display: flex;
+  padding: 1rem; 
   gap: 1rem;
+  margin-top: 0;
   flex-direction: column;
 }
 
 form > p {
-  font-size: 1.5em;
   align-self: center;
   margin: 0.5em;
 }
 
 dialog * {
   font-size: 32px;
+}
+
+input#read {
+  height: 25px;
+  width: 25px;
 }

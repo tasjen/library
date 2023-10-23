@@ -13,28 +13,27 @@
       <button id="login">login</button>
     </header>
     <main>
-      <button id="add-book">Add book</button>
-      <div id="book-container">
-        <div>book1</div>
-        <div>book2</div>
-        <div>book3</div>
-        <div>book4</div>
-        <div>book5</div>
-        <div>book6</div>
-        <div>book7</div>
-        <div>book8</div>
+      <div id="add-book-container">
+        <button id="add-book">NEW BOOK</button>
       </div>
+      <div id="book-container"></div>
     </main>
 
-    <dialog>
-      <form>
-        <p>Add new book</p>
-        <input placeholder="Title" required>
-        <input placeholder="Author" required>
-        <input placeholder="Pages" required>
-        <button type="submit">Submit</button>
-        <button type="button" id="cancel-dialog">Cancel</button>
-      </form>
-    </dialog>
+    <div id="dialog-container">
+      <dialog>
+        <form>
+          <p>Add a new book</p>
+          <input type="text" id="title" placeholder="Title" required />
+          <input type="text" id="author" placeholder="Author" required />
+          <input type="number" id="pages" placeholder="Pages" required />
+          <div>
+            <label for="read">Have you read it?</label>
+            <input type="checkbox" id="read" />
+          </div>
+          <button type="submit" id="submit-dialog">Submit</button>
+          <button type="button" id="cancel-dialog">Cancel</button>
+        </form>
+      </dialog>
+    </div>
   </body>
 </html>
