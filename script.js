@@ -11,6 +11,10 @@ const form = document.querySelector("form");
 const submitDialog = document.querySelector("#submit-dialog");
 const cancelDialog = document.querySelector("#cancel-dialog");
 
+const GREEN = "#90ee90";
+const RED = "#ee9090";
+
+
 addBook.addEventListener("click", () => dialog.showModal());
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -20,9 +24,7 @@ form.addEventListener("submit", (event) => {
 });
 cancelDialog.addEventListener("click", () => dialog.close());
 dialog.addEventListener("click", (event) => {
-  if (!form.contains(event.target)){
-    dialog.close();
-  }
+  if (!form.contains(event.target)) dialog.close();
 });
 
 function Book(title, author, pages, read) {
@@ -47,9 +49,9 @@ function addBookToLibrary(title, author, pages, read) {
 
   const r = document.createElement("button");
   r.textContent = book.read ? "Read" : "Not read";
-  r.style.backgroundColor = book.read ? "#90ee90" : "#ee9090";
+  r.style.backgroundColor = book.read ? GREEN : RED;
   r.addEventListener('click', () => {
-    r.style.backgroundColor = book.read ? "#ee9090" : "#90ee90";
+    r.style.backgroundColor = book.read ? RED : GREEN;
     r.textContent = book.read ? "Not read" : "Read"
     book.read = book.read ? false : true;
   });
